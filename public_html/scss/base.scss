@@ -1,0 +1,62 @@
+/* 
+  This file defines the base styles. Some of these might be overriden in other files.
+*/
+
+@import 'libs/normalize';
+
+
+
+$nav-height: 50px;
+
+
+#header {
+    * {
+        // For safety.
+        box-sizing: border-box;
+    }
+    background: rgb(255,255,255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-height;
+    border-bottom: 1px solid rgba(200,200,200,0.4);
+
+    >ul {
+        list-style: none;
+        display: table;
+        padding: 0;
+        margin: 0;
+        margin: 0 auto;
+        height: $nav-height;
+        border-right: 1px solid rgba(200,200,200,0.4); 
+
+        >li {
+            padding: 0;
+            display: table-cell;
+            height: $nav-height;
+            border-left: 1px solid rgba(200,200,200,0.4);
+            >a {
+                position: relative;
+                display: block;
+                min-width: 5.75em;
+                text-align: center;
+                vertical-align: middle;
+                height: $nav-height;
+                // Top right bottom left
+                padding: 5pt 1em 1px 1em;
+                &:hover {
+                    background: rgba(220,220,220,0.4);
+                }
+            }
+        }
+    }
+
+}
+
+#content {
+    padding-top: 60px;
+}
+
+
+
