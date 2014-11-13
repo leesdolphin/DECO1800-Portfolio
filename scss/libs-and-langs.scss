@@ -1,0 +1,78 @@
+@import "base";
+
+.code-compare {
+	display: block;
+	font-size: 0; // Hack to prevent spaces from disrupting flow.
+
+	.code-sample {
+		@include responsive("width", $large: 50%);
+	}
+
+}
+
+.code-sample {
+	position: relative;
+	width: 100%;
+	vertical-align: text-top;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 2px;
+	pre, code{
+		font-size: 10px;
+	}
+	pre {
+		margin: 0;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+	}
+	.source {
+		font-size: 12px;
+		display: none;
+		&.current {
+			display: block;
+		}
+		.header {
+			width: 100%;
+			display: table;
+			color: black;
+			background-color: #CFCFCF;
+			.filename, .language {
+				box-sizing: border-box;
+				width: 50%;
+				padding: 1px 5px;
+			}
+			.filename {
+				text-align: left;
+				display: inline-block;
+			}
+			&.switcher .language:before {
+					@extend .glyphicon;
+					font-size: 90%;
+					// Refresh icon.
+					content: "\e031";
+					padding: 0 3px;
+				}
+			.language {
+				text-align: right;
+				margin-left: auto;
+				display: inline-block;
+			}
+		}
+	}
+	.lang {
+		font-size: 12px;
+		top: 0;
+		right: 2px; // Padding
+		border-radius: 0 0 0 5px;
+		padding: 0 0.5em;
+		display: inline-block;
+		position: absolute;
+		z-index: 1000;
+		color: black;
+		background-color: #CFCFCF;
+		&.switcher {
+			cursor: pointer;
+		}
+	}
+}

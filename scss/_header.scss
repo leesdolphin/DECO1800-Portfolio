@@ -1,0 +1,89 @@
+
+$header-border-height: 3px;
+$header-internal-height: 40px;
+$header-height: $header-internal-height + $header-border-height;
+$footer-internal-height: 1.3em;
+$footer-padding: $footer-internal-height;
+$footer-height: $footer-internal-height + $footer-padding;
+
+
+//****** HEADER ******//
+#header {
+	$text-color: white;
+	$text-hover-color: darken($text-color, 15%);
+
+	box-sizing: border-box;
+
+	height: $header-height;
+	width: 100%;
+	top: 0px;
+	position: fixed;
+	z-index: 1030;
+
+	background: $primary-color;
+	border-bottom: $header-border-height solid $primary-color;
+	text-align: center;
+	ul {
+		display: inline-block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			padding: 0 1px;
+			float: left;
+			a {
+				box-sizing: content-box;
+				margin: auto;
+				display: block;
+				float: none;
+				padding: 11px 15px;
+				height: $header-internal-height - (11px * 2);
+				color: $text-color;
+				text-decoration: none;
+				&:hover {
+					color: $text-hover-color;
+				}
+			}
+			&.current {
+				a {
+					border-bottom: $header-border-height solid darken($primary-color, 10%);
+				}
+			}
+		}
+	}
+}
+
+//****** FOOTER ******//
+#footer {
+	$text-color: black;
+	box-sizing: border-box;
+	width: 100%;
+	height: $footer-internal-height;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 2px solid $primary-color;
+	background: none;
+	color: $text-color;
+
+	* {
+		font-weight: 100;
+		font-size: 90%;
+	}
+	a {
+		color: lighten($text-color, 20%);
+		&:hover {
+			color: $text-color;
+		}
+	}
+	#left, #right {
+		position: absolute;
+		top: 0;
+	}
+	#left {
+		left: 2px;
+	}
+	#right {
+		right: 2px;
+	}
+}

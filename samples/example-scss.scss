@@ -1,0 +1,22 @@
+$padding: 12px;
+
+@mixin border-radius($radius) {
+  /* From http://sass-lang.com/guide */
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+body {
+  font-size: 16px;
+  section {
+    border: 1px solid lighten(blue, 20%);
+    @include border-radius($padding / 4);
+    padding: 0 $padding;
+  }
+  .heading {
+    // Comments using '//' don't appear in the CSS!
+    padding: 0 $padding * 2.5;
+  }
+}

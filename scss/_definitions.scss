@@ -1,0 +1,38 @@
+
+// Import bootstrap glyphicons.
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/glyphicons";
+
+
+$primary-color: #48f;
+
+$background-color: white !default;
+$body-color: black !default;
+
+$link-color: lighten($primary-color, 10%);
+
+$large-content-width: 900px;
+
+@mixin propsToCss($props) {
+	@each $prop, $value in $props {
+		#{$prop}: $value;
+	}
+}
+
+
+@mixin responsive($prop, $default:null, $medium:null, $large:null) {
+	@if variable_exists('default') {
+		#{$prop}: $default;
+	}
+	@if variable_exists('medium') {
+		@media screen and (min-width: 640px) {
+			#{$prop}: $medium;
+		}
+	}
+	@if variable_exists('large') {
+		@media screen and (min-width: 900px) {
+			#{$prop}: $large;
+		}
+	}
+}

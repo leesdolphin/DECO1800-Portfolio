@@ -1,0 +1,12 @@
+body {
+  font-size: 16px; }
+  body section {
+    border: 1px solid blue;
+    /* From http://sass-lang.com/guide */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 12px; }
+  body .heading {
+    padding: 0 30px; }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lee's Portfolio</title>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link type='text/css' rel='stylesheet' href='bower_components/normalize.css/normalize.css' />
+	<link type='text/css' rel='stylesheet' href='bower_components/prismjs/prism.css' />
+	<link type='text/css' rel='stylesheet' href='css/libs-and-langs.css' />
+	<script src='bower_components/jquery/dist/jquery.js'></script>
+	<script src='bower_components/prismjs/prism.js' data-manual></script>
+	<script src='js/libs-and-langs.js' data-manual></script>
+</head>
+<body>
+	<div id='wrapper'>
+		<div id='header'>
+			<ul>
+				<li>
+					<a href='index.html'>Home</a>
+				</li>
+				<li>
+					<a href='gl.html'>WebGL</a>
+				</li>
+				<li class='current'>
+					<a href='libs-and-langs.html'>Coding</a>
+				</li>
+				<li>
+					<a href='contact.html'>Contact</a>
+				</li>
+				<li>
+					<a href='portfolio.html'>Portfolio</a>
+				</li>
+			</ul>
+		</div>
+		<div id='content'>
+			<h1>Libraries and Languages</h1>
+			<section id='intro'>
+				I love learning new languages becuase I allways see it as a chalange I can achive. So in
+				this project I originally intended to write my code in
+				<a href='#coffee-script'>CoffeeScript</a> but decided against it. I did write all my CSS
+				using a superset of CSS, <a href='#SCSS'>SCSS</a>. I also made frequent use of
+				<a href='#jQuery'>jQuery</a>, one of my favourite Javascript libraries.
+			</section>
+			<section id='coffee-script'>
+				<h2>CoffeeScript<a href='http://coffeescript.org/' class='link-icon' target='_blank'></a></h2>
+				Coffeescript is a python and ruby like language that compiles into JavaScript. The language
+				itself simplifies many of the harder parts of JavaScript to create clearer source code.<br />
+				I really like the way CoffeeScript feels; the importance it puts on indentation(it's like
+				python in that regard). I <b>was</b> also very fond of the syntax for creating classes.
+				However I have found new love of the JavaScript prototypal model. Compare the following code:
+				<div class='code-compare'>
+					<div class='code-sample' language='coffeescript' src='samples/class-coffee.coffee' compiled-language='javascript'	compiled-src='samples/class-coffee.js'>
+					</div>
+					<div class='code-sample' language='javascript' src='samples/class-js.js'>
+					</div>
+				</div>
+				Whilst it is shorter; flip to the compiled javascript(click CoffeeScript). It's basically the same code(minus the extra processing); but it looks worse.
+			</section>
+			<section id='SCSS'>
+				<h2>Sassy CSS<a href='http://sass-lang.com/' class='link-icon' target='_blank'></a></h2>
+				I absolutely love SCSS. I love it because any CSS is already valid SCSS, and it has many of
+				the features I like comming from Java(my first language). The ability to modularise your
+				CSS and then have everything pull into one file. Also a heigherarcy, includes, functions, mixins, and math.
+				<div class='code-sample' language='scss' src='samples/example-scss.scss' compiled-language='css'	compiled-src='samples/example-scss.css'>
+				</div>
+			</section>
+			<section>
+				<h2>jQuery<a href='http://jquery.com/' class='link-icon' target='_blank'></a></h2>
+				I know that jQuery is not needed on every website; but I just haven't written one of those
+				yet. It is my go-to library. The first one I include. I just makes life so much easier and
+				clearer to modify the DOM with.
+				<div class='code-compare'>
+					<div class='code-sample' language='javascript' src='samples/jquery.js'>
+					</div>
+					<div class='code-sample' language='javascript' src='samples/pure.js'>
+					</div>
+				</div>
+				Though the pure JavaScript is apparently faster<a href='http://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/' target='_blank'></a>
+			</section>
+		</div>
+		<div id='footer'>
+			<div id='right'>Portfolio by Lee Symes</div>
+			<div id='left'>A small website using JavaScript,
+				<a class='inline' href='libs-and-langs.html#SCSS'>SCSS</a> and HTML</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

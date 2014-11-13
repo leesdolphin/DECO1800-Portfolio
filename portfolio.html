@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lee's Portfolio</title>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link type='text/css' rel='stylesheet' href='bower_components/normalize.css/normalize.css' />
+	<link type='text/css' rel='stylesheet' href='bower_components/prismjs/prism.css' />
+	<link type='text/css' rel='stylesheet' href='css/libs-and-langs.css' />
+	<script src='bower_components/jquery/dist/jquery.js'></script>
+	<script src='bower_components/prismjs/prism.js' data-manual></script>
+	<script src='js/libs-and-langs.js'></script>
+</head>
+<body>
+	<div id='wrapper'>
+		<div id='header'>
+			<ul>
+				<li>
+					<a href='index.html'>Home</a>
+				</li>
+				<li>
+					<a href='gl.html'>WebGL</a>
+				</li>
+				<li>
+					<a href='libs-and-langs.html'>Coding</a>
+				</li>
+				<li>
+					<a href='contact.html'>Contact</a>
+				</li>
+				<li class='current'>
+					<a href='portfolio.html'>Portfolio</a>
+				</li>
+			</ul>
+		</div>
+		<div id='content'>
+			<h1>Reflection</h1>
+			<section>
+				This subject has really allowed me to have fun; experiment with new technology
+				and also have the opportunity to write JavaScript in an application's setting.
+				I really enjoyed the time I spent programming, and the time I spent solving the
+				shere volume of problems that Trove threw at me.
+			</section>
+			<section>
+				<h2>The Early Weeks</h2>
+				So early on; I had my heart set on doing <a
+				href='http://aussiemon.info/#/' target='blank'>AuzzieMon</a> but unfortunately that idea got
+				shot down in a hail of fire. So we changed tack and went with the timeline idea. In
+				keeping with my background from programming, my main concerns were purely with
+				implementation; how was the timeline going to be build(it was hard work).<br />
+				So I set my heart on using <a href="libs-and-langs.html#coffeescript">CoffeeScript</a> and
+				<a href="libs-and-langs.html#SCSS">SCSS</a>. I think it would have been really good to do;
+				however the technical knowledge of the rest of my group wasn't enough to warrant it;
+				so back to the basics of JavaScript and CSS.
+			</section>
+			<section>
+				<h2>To coding</h2>
+				I was designated lead programmer and got stuck into making the application tick.
+				Unfortunately I decided to make singletons by creating a class and then creating a new
+				instance and returning it.  For example:
+				<div class='code-sample' language='javascript' src='samples/singleton.js'>
+				</div>
+				Unfortunately this is really bad practice mainly because it is completely unnecessary.
+				It makes the code hard to read whilst providing no benefits.
+			</section>
+			<section>
+				<h2>Slowly does it</h2>
+				After finally managing to get the timetable to display; I finally started loading LOTS of
+				data. Which lead to another problem. Speed. Every time new data needed to be added; lots
+				of data changed, the massive DOM was rearanged frequently. This made the page
+				simply freeze every time new data was added. Obviously this was unacceptable, so we solved
+				it by limiting the amount of data loaded. A stop gap solution obviously.
+			</section>
+			<section>
+				<h2>Where Have You Been</h2>
+				And then <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> found its way
+				into my Google searches. It is the answer I had been looking for. This made all the code
+				that I had written to organise the timeline redundant; but it made the timeline
+				responsive(slightly usable on mobile), fast and look better.
+			</section>
+			<section>
+				<h2>Overall</h2>
+				I really enjoyed the course; My personal experience of it was that it was incredibly easy.
+				The content was presented in a way that I could absorb in my own time which helped
+				significantly.
+				<br />
+				I think that my ability to work with a team of people improved significantly; designating
+				small tasks out to the team meant that I could focus on the large components, and also
+				allow them to partake in the development as well.
+			</section>
+		</div>
+		<div id='footer'>
+			<div id='right'>Portfolio by Lee Symes</div>
+			<div id='left'>A small website using JavaScript, <a class='inline'
+				href='libs-and-langs.html#SCSS'>SCSS</a> and HTML</div>
+		</div>
+	</div>
+</body>
+</html>

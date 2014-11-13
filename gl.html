@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lee's Portfolio</title>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link type='text/css' rel='stylesheet' href='bower_components/normalize.css/normalize.css' />
+	<link type='text/css' rel='stylesheet' href='css/gl.css' />
+	<script src='bower_components/jquery/dist/jquery.js'></script>
+	<script src='bower_components/jquery.stellar/jquery.stellar.js'></script>
+	<script src='js/gl.js'></script>
+</head>
+<body>
+	<div id='wrapper'>
+		<div id='header'>
+			<ul>
+				<li>
+					<a href='index.html'>Home</a>
+				</li>
+				<li class='current'>
+					<a href='gl.html'>WebGL</a>
+				</li>
+				<li>
+					<a href='libs-and-langs.html'>Coding</a>
+				</li>
+				<li>
+					<a href='contact.html'>Contact</a>
+				</li>
+				<li>
+					<a href='portfolio.html'>Portfolio</a>
+				</li>
+			</ul>
+		</div>
+		<div id='content'>
+			<h1>Color Picker</h1>
+			<section id='no-webgl'>
+				I'm sorry; but it appears that you don't have WebGL installed or emabled in
+				your browser. Please download an updated browser; or enable it in your settings.
+			</section>
+			<section id='original' class='canvas-right'>
+				<canvas class='spinner' exec='original-moving'></canvas>
+				<div class='description'>
+					This colour picker is rendered entirely in the browser using WebGL. I think it looks
+					pretty cool.
+				</div>
+			</section>
+			<section id='problem' class='canvas-left'>
+				<canvas class='spinner' exec='original-problems-highlighted'></canvas>
+				<div class='description'>
+					The problem is that the highlighted areas look terrible especially when viewed from
+					anything other than straght on to the screen.
+				</div>
+			</section>
+			<section id='solution-comparison' class='canvas-double'>
+				<div class='description'>
+					The solution was to modify the rendering of the color selector to create a flatter
+					transition into the secondary colors.
+				</div>
+				<canvas class='spinner' exec='comparison'></canvas>
+			</section>
+			<section id='solution' class='canvas-left'>
+				<canvas class='spinner' exec='solution-moving'></canvas>
+				<div class='description'>
+					This creates a much nicer looking color picker.
+				</div>
+			</section>
+			<section id='attribution'>
+				The code to make these spinners using WebGL was made with the help of the
+				<a href=''>Introduction to WebGL</a> tutorial(it's really good). The color picker uses
+				the HSV algorithm from <a href=''>Wikipedia</a> and was mostly developed during
+				<a href=''>CampJS</a>.
+			</section>
+		</div>
+		<div id='footer'>
+			<div id='right'>Portfolio by Lee Symes</div>
+			<div id='left'>A small website using JavaScript, <a class='inline' href='libs-and-langs.html#SCSS'>SCSS</a> and HTML</div>
+		</div>
+	</div>
+</body>
+</html>

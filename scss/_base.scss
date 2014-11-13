@@ -1,0 +1,78 @@
+@import "definitions";
+@import "header";
+
+body, html {
+	margin:0;
+	padding:0;
+	height:100%;
+	color: $body-color;
+	background: $background-color;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+code, pre {
+	font-size: 16px;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+}
+
+#wrapper {
+	box-sizing: border-box;
+	padding-bottom: $footer-height;
+	padding-top: $header-height;
+	min-height: 100%;
+	position: relative;
+}
+
+#content {
+	padding-top: 5px;
+	margin: 0 auto;
+	font-size: 1.7em;
+	@include responsive("width", 100%, 100%, $large-content-width);
+}
+
+a, a:visited {
+	color: $link-color;
+	text-decoration: none;
+	&:hover {
+		color: lighten($link-color, 10%);
+	}
+	&.link-icon {
+		// This is the link icon.
+		&:before {
+			@extend .glyphicon;
+			font-size: 60%;
+			content: "\e144";
+		}
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+	color: $primary-color;
+	margin: 0;
+	padding: 0;
+	a.link-icon {
+		color: $primary-color;
+		font-size: 50%;
+		padding: 0 2px;
+		&:hover {
+			color: lighten($primary-color, 10%);
+		}
+	}
+}
+h1 {
+	font-size: 2.7em;
+	padding-bottom: 1em / 2.7;
+}
+h2 {
+	font-size: 2em;
+	padding-bottom: 1em / 2.2;
+}
+h3 {
+	font-size: 1.3em;
+	padding-bottom: 1em / 3;
+}
