@@ -3,9 +3,10 @@
 <head>
 	<title>Lee's Portfolio</title>
 	<meta charset='UTF-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta name='gc:base' content='./' />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<link type='text/css' rel='stylesheet' href='bower_components/normalize.css/normalize.css' />
-	<link type='text/css' rel='stylesheet' href='css/index.css' />
+	<link type='text/css' rel='stylesheet' href='css/contact.css' />
 	<script src='bower_components/jquery/dist/jquery.js'></script>
 </head>
 <body>
@@ -14,9 +15,6 @@
 			<ul>
 				<li>
 					<a href='index.html'>Home</a>
-				</li>
-				<li>
-					<a href='gl.html'>WebGL</a>
 				</li>
 				<li>
 					<a href='libs-and-langs.html'>Coding</a>
@@ -30,12 +28,20 @@
 			</ul>
 		</div>
 		<div id='content'>
-			You can contact me through GitHub
-			<div class="github-card" data-user="leesdolphin"></div>
-			I am an active member of the open source community, filing bug reports
-			(<a href='https://github.com/lepture/github-cards/issues/24'>like this</a>) and adding
-			features and fixing bugs in the tools I use
-			(<a href='https://github.com/gradle/gradle/pull/247'>such as this</a>).
+			<section>
+				<div class='github-cards'><div class='github-card' data-user='leesdolphin'></div></div>
+				Hi, My name is Lee. I am a final year of a IT/Science dual degree majoring in Software
+				Design and Mathmatics(the fun stuff). I am an avid programmer who is pasionate about
+				everything open source. I enjoy programming in JavaScript and Java; as well as dabbling
+				in Python, Ruby, C and C++. I am an active member of the open source community, filing
+				bug reports as well as adding features and fixing bugs in the tools I use. I even made a
+				pull request for the <a href='https://github.com/lepture/github-cards/'>GitHub Card</a>
+				library that I used.
+			</section>
+				<section>
+					Did I mention that I like meta:<br />
+					<div class='github-card' data-user='leesdolphin' data-repo='DECO1800-Portfolio'></div>
+			</section>
 		</div>
 		<div id='footer'>
 			<div id='right'>Portfolio by Lee Symes</div>
@@ -44,6 +50,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="http://lab.lepture.com/github-cards/widget.js"></script>
+	<script src='http://lab.lepture.com/github-cards/widget.js'></script>
 </body>
 </html>

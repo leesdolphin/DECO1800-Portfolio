@@ -14,6 +14,16 @@ $link-color: lighten($primary-color, 10%);
 
 $large-content-width: 900px;
 
+%clearfix {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+
+
 @mixin propsToCss($props) {
 	@each $prop, $value in $props {
 		#{$prop}: $value;

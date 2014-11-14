@@ -19,9 +19,6 @@
 					<a href='index.html'>Home</a>
 				</li>
 				<li>
-					<a href='gl.html'>WebGL</a>
-				</li>
-				<li>
 					<a href='libs-and-langs.html'>Coding</a>
 				</li>
 				<li>
@@ -41,57 +38,137 @@
 				shere volume of problems that Trove threw at me.
 			</section>
 			<section>
-				<h2>The Early Weeks</h2>
-				So early on; I had my heart set on doing <a
-				href='http://aussiemon.info/#/' target='blank'>AuzzieMon</a> but unfortunately that idea got
-				shot down in a hail of fire. So we changed tack and went with the timeline idea. In
-				keeping with my background from programming, my main concerns were purely with
-				implementation; how was the timeline going to be build(it was hard work).<br />
-				So I set my heart on using <a href="libs-and-langs.html#coffeescript">CoffeeScript</a> and
-				<a href="libs-and-langs.html#SCSS">SCSS</a>. I think it would have been really good to do;
-				however the technical knowledge of the rest of my group wasn't enough to warrant it;
-				so back to the basics of JavaScript and CSS.
+				<h2>The Design</h2>
+				<section>
+					We chose groups quite early on in the semester, which is always wise in my opinion. Early
+					on I had my heart set on doing an
+					<a href='http://aussiemon.info/#/' target='blank'>AuzzieMon</a> clone but unfortunately
+					that idea got shot down in a hail of fire. So we changed tack and went with the timeline
+					idea.
+				</section>
+				<section>
+					<h3>Which hat is mine?</h3>
+					Once we had an idea chosen; we were then tasked with 'wearing' each of the 6 coloured
+					hats from Edward de Bono. I am really good at being a white and a black hat. I think
+					it's because I approach a problem from a very logical, programming perspective.
+					<br />
+					Unfortunately I have great trouble seperating myself from the implementation phase of
+					any project.
+					During the design phase, I frequently shot down ideas(in my head) that I considered too
+					hard to implement. I had this problem in DECO2500 as well where I would shoot down
+					ideas(also internally) which were unfeasable to implement. I think it comes from my
+					programming background; always focusing on if a problem is solveable, and not on the UX
+					of that idea.
+				</section>
 			</section>
 			<section>
-				<h2>To coding</h2>
-				I was designated lead programmer and got stuck into making the application tick.
-				Unfortunately I decided to make singletons by creating a class and then creating a new
-				instance and returning it.  For example:
-				<div class='code-sample' language='javascript' src='samples/singleton.js'>
-				</div>
-				Unfortunately this is really bad practice mainly because it is completely unnecessary.
-				It makes the code hard to read whilst providing no benefits.
+				<h2>The Build</h2>
+				<section>
+					I was designated lead programmer and got stuck into making the application tick.
+				</section>
+				<section>
+					<h3>False Start</h3>
+					With JavaScript and CSS comming back into fashion as web browsers become more forward
+					thinking and standards compliant(IE *shakes fist*) this project seemed perfect to use the
+					newer compile-to languages like
+					<a href="libs-and-langs.html#coffeescript">CoffeeScript</a> and
+					<a href="libs-and-langs.html#SCSS">SCSS</a>. So I set my heart on using them.
+					Unfortunately I overlooked the fact that I wasn't working alone. This caused problems
+					because my group would edit the compiled JavaScript, then I would edit the CoffeeScript
+					and when it compiled, the JavaScript changes would be overwritten. This meant that I
+					changed everything back to plain CSS and JavaScript.
+				</section>
+				<section>
+					<h3>A slightly better start</h3>
+					Unfortunately when I moved over to JavaScript, I kept the singleton class style that I
+					had written in CoffeeScript(where it's clearer). This made the code really hard to read
+					and then throw in JavaScript's scoping for even more debugging fun.
+					<br />
+					What I realise now is that having the singleton pattern is really bad practice in the
+					circumstances that I used them. It made the code harder to understand, develop and debug.
+				</section>
+				<section>
+					<h3>Slowly does it</h3>
+					After finally managing to get the timetable to display; I finally started loading LOTS of
+					data. Which lead to another problem. Speed. Every time new data needed to be added; lots
+					of data changed, the massive DOM was rearanged frequently. This made the page
+					simply freeze every time new data was added. Obviously this was unacceptable, so we solved
+					it by limiting the amount of data loaded. A stop gap solution obviously.
+				</section>
+				<section>
+					<h3>Where Have You Been</h3>
+					And then <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> found its way
+					into my Google searches. It is the answer I had been looking for. This made all the code
+					that I had written to organise the timeline redundant; but it made the timeline
+					responsive(slightly usable on mobile), fast and look better.
+				</section>
 			</section>
 			<section>
-				<h2>Slowly does it</h2>
-				After finally managing to get the timetable to display; I finally started loading LOTS of
-				data. Which lead to another problem. Speed. Every time new data needed to be added; lots
-				of data changed, the massive DOM was rearanged frequently. This made the page
-				simply freeze every time new data was added. Obviously this was unacceptable, so we solved
-				it by limiting the amount of data loaded. A stop gap solution obviously.
-			</section>
-			<section>
-				<h2>Where Have You Been</h2>
-				And then <a href="http://masonry.desandro.com/" target="_blank">Masonry</a> found its way
-				into my Google searches. It is the answer I had been looking for. This made all the code
-				that I had written to organise the timeline redundant; but it made the timeline
-				responsive(slightly usable on mobile), fast and look better.
+				<h2>The Reflection</h2>
+				<section>
+					Well this is a little bit meta, but here we go. This site was an absolute pain to put
+					together at first. The most important question flowing through my mind was: <i>How am I
+						going to make it look decent?
+					</i>. I started out with my go-to design. Floating header,
+					fixed footer, and grey; The more grey the better, Use all the greys. But that really
+					didn't feel right to me. It felt too 'Bootstrappy'.
+				</section>
+				<section>
+					<h3>Material to the Rescue</h3>
+					So I decided I'd go with another
+					option. After reading a couple of groups final reports for DECO3801, I noticed that
+					they had used Google's
+					<a href='http://www.google.com/design/spec/material-design/introduction.html'
+					target='_blank'>Material Design</a>; so I borrowed most of the guidelines.
+					Single primary color; and other colors derrived from it. This really helped me get over
+					the 'blank canvas syndrome' and get on with actually creating content for the site.
+				</section>
+				<section>
+					<h3>Language Choice<a href='libs-and-langs.html' target='_blank' class='link-icon'></a>
+					</h3>
+					This was my own project; no-one else needed to look at it; so I decided to use SCSS. It
+					has made life so easy. The number of times I've needed to change the padding on the
+					footer; and it has just flowed through. Plus I think it makes the style sheets easier to
+					read and manage
+				</section>
 			</section>
 			<section>
 				<h2>Overall</h2>
-				I really enjoyed the course; My personal experience of it was that it was incredibly easy.
-				The content was presented in a way that I could absorb in my own time which helped
-				significantly.
-				<br />
-				I think that my ability to work with a team of people improved significantly; designating
-				small tasks out to the team meant that I could focus on the large components, and also
-				allow them to partake in the development as well.
+				<section>
+					I really enjoyed the course. My group was fantastic, doing the reports and 'fluffy' stuff
+					whilst I worked on the website. I came into this course treating it as a 'easy 7'
+					subject; but I think the work level was sufficient.
+				</section>
+				<section>
+					<h3>Teaching</h3>
+					I didn't go to any of the lectures after the first few. The slides were consise
+					and clear giving me the information I needed without having to sit through it. Lots
+					of the lecture's content just didn't apply to me due to my experiences on projects
+					both inside and outside university.
+					<br />
+					I really didn't find the workshops usefull at all. I guess this was because I am
+					proficient in all the neccessary languages and I also wasn't doing any of the extra
+					stuff around the website such as the poster.
+					<br />
+					I did however appreciate the contact times as a time to work on the project whilst
+					also having the group there to bounce ideas off.
+				</section>
+				<section>
+					<h3>Blogging<a href='http://lee-symes-deco1800.blogspot.com.au/'
+						target='_blank' class='link-icon'></a>
+					</h3>
+					I did like the requirement to write a blog. I tended to write really short posts where
+					I just wanted to do the 'assigned' post; and really long essays when I was given free
+					reign. I also found that I have a distinct preference to write very informally(also on
+					this site). It's possibly my personality to use humor to make myself feel at ease.
+				</section>
 			</section>
 		</div>
 		<div id='footer'>
 			<div id='right'>Portfolio by Lee Symes</div>
 			<div id='left'>A small website using JavaScript, <a class='inline'
-				href='libs-and-langs.html#SCSS'>SCSS</a> and HTML</div>
+				href='libs-and-langs.html#SCSS'>SCSS</a> and HTML
+			</div>
 		</div>
 	</div>
 </body>

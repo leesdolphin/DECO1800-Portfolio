@@ -614,6 +614,11 @@
 .glyphicon-tree-deciduous:before {
   content: "\e200"; }
 
+#wrapper:after, #content:after, section:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 #header {
   box-sizing: border-box;
   height: 43px;
@@ -696,7 +701,7 @@ code, pre {
 #content {
   padding-top: 5px;
   margin: 0 auto;
-  font-size: 1.7em;
+  font-size: 1.2em;
   width: 100%; }
   @media screen and (min-width: 640px) {
     #content {
@@ -704,6 +709,11 @@ code, pre {
   @media screen and (min-width: 900px) {
     #content {
       width: 900px; } }
+
+section {
+  padding: 0.5em 0; }
+  section > section {
+    padding-left: 2em; }
 
 a, a:visited {
   color: #77a8ff;
@@ -721,7 +731,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0; }
   h1 a.link-icon, h2 a.link-icon, h3 a.link-icon, h4 a.link-icon, h5 a.link-icon, h6 a.link-icon {
     color: #48f;
-    font-size: 50%;
+    font-size: 80%;
     padding: 0 2px; }
     h1 a.link-icon:hover, h2 a.link-icon:hover, h3 a.link-icon:hover, h4 a.link-icon:hover, h5 a.link-icon:hover, h6 a.link-icon:hover {
       color: #77a8ff; }
@@ -738,65 +748,7 @@ h3 {
   font-size: 1.3em;
   padding-bottom: 1em / 3; }
 
-section {
-  display: block;
-  clear: both;
-  width: 100%;
-  box-sizing: content-box; }
-  section:after {
-    content: '';
-    clear: both; }
-  section .description {
-    display: inline; }
-  section canvas {
-    height: 100vw;
-    width: 100vw;
-    margin-bottom: 1em;
-    box-sizing: content-box;
-    border: 1px solid black; }
-    @media screen and (min-width: 640px) {
-      section canvas {
-        height: 200px; } }
-    @media screen and (min-width: 900px) {
-      section canvas {
-        height: 400px; } }
-    @media screen and (min-width: 640px) {
-      section canvas {
-        width: 200px; } }
-    @media screen and (min-width: 900px) {
-      section canvas {
-        width: 400px; } }
-  section canvas.no-webgl {
-    background-color: #ddd;
-    border: 1px solid red; }
-  section.canvas-left canvas {
-    float: left;
-    margin-right: 10px; }
-  section.canvas-right canvas {
-    float: right;
-    margin-left: 10px; }
-  section.canvas-double canvas {
-    margin-top: 2px;
-    height: 50vw;
-    width: 100%; }
-    @media screen and (min-width: 640px) {
-      section.canvas-double canvas {
-        height: 100px; } }
-    @media screen and (min-width: 900px) {
-      section.canvas-double canvas {
-        height: 450px; } }
-    @media screen and (min-width: 900px) {
-      section.canvas-double canvas {
-        width: 900px; } }
+.github-cards {
+  float: right; }
 
-#no-webgl {
-  font-size: 120%;
-  font-weight: 500;
-  color: red;
-  box-sizing: border-box;
-  display: none;
-  border: 3px solid red;
-  padding: 8px;
-  margin: 20px 0; }
-
-/*# sourceMappingURL=gl.css.map */
+/*# sourceMappingURL=contact.css.map */

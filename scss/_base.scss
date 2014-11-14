@@ -24,13 +24,23 @@ code, pre {
 	padding-top: $header-height;
 	min-height: 100%;
 	position: relative;
+	@extend %clearfix;
 }
 
 #content {
 	padding-top: 5px;
 	margin: 0 auto;
-	font-size: 1.7em;
+	font-size: 1.2em;
 	@include responsive("width", 100%, 100%, $large-content-width);
+	@extend %clearfix;
+}
+
+section{
+	padding: 0.5em 0;
+	@extend %clearfix;
+	>section {
+		padding-left: 2em;
+	}
 }
 
 a, a:visited {
@@ -57,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	a.link-icon {
 		color: $primary-color;
-		font-size: 50%;
+		font-size: 80%;
 		padding: 0 2px;
 		&:hover {
 			color: lighten($primary-color, 10%);
