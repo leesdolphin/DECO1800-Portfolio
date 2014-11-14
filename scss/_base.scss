@@ -37,7 +37,6 @@ code, pre {
 
 section{
 	padding: 0.5em 0;
-	@extend %clearfix;
 	>section {
 		padding-left: 2em;
 	}

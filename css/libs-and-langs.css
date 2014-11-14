@@ -614,7 +614,7 @@
 .glyphicon-tree-deciduous:before {
   content: "\e200"; }
 
-#wrapper:after, #content:after, section:after {
+#wrapper:after, #content:after {
   content: "";
   display: table;
   clear: both; }
